@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-group description="" sid="126498832690848" title="Controls">
+            <sub-events>
+                <event-block any="1" sid="222187239404031">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="686890501350830" type="Touch">
+                            <param id="0" name="Object">LeftCtrl</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="639077173587947" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="381521865809993" type="Player">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="783118473841971" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="865512109303691">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="227079141381999" type="Touch">
+                            <param id="0" name="Object">RightCtrl</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="410616669531106" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="545737914135316" type="Player">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="968475978278141" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="825185343670617">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="730152813900608" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="597355604364393" type="Touch">
+                            <param id="0" name="Object">JumpCtrl</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="789089646797911" type="Player">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="446537384068434">
+                    <conditions>
+                        <condition behavior="Platform" id="0" name="Is moving" sid="912384079707177" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="327745173623940" type="Player">
+                            <param id="0" name="Animation">&quot;walking&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="459319814252183">
+                    <conditions>
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="259148843865628" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="851559761768609" type="Player">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="543421233506398" title="Camera">
+            <sub-events>
+                <event-block sid="487076522666789">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="124666591001780" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="176532683347268" type="Camera">
+                            <param id="0" name="X">lerp(self.X,Player.X,0.1)</param>
+                            <param id="1" name="Y">lerp(self.Y,Player.Y,0.1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="279453530098117">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="210597404537488" type="Sprite">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="905373336018825" type="Player">
+                    <param id="0" name="X">25</param>
+                    <param id="1" name="Y">25</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

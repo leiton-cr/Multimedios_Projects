@@ -1,6 +1,6 @@
 ﻿{
-	"name": "Test project",
-	"short_name": "Test project",
+	"name": "Test",
+	"short_name": "Test",
 	"start_url": "index.html",
 	"display": "fullscreen",
 	"orientation": "any",
