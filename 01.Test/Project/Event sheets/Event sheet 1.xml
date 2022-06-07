@@ -108,5 +108,111 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="231606160962991" title="Swappable" />
+        <event-block sid="140529323649642">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="797439903051663" type="Player">
+                    <param id="0" name="Object">Swappable</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Flash" id="1" name="Stop flashing" sid="405928820858701" type="Swappable" />
+                <action id="-10" name="Set value" sid="583625899286166" type="Player">
+                    <param id="0" name="Instance variable">Swap</param>
+                    <param id="1" name="Value">Swappable.UID</param>
+                </action>
+                <action id="0" name="Set text" sid="549421087105120" type="Text">
+                    <param id="0" name="Text">Swappable.UID</param>
+                </action>
+                <action id="-10" name="Set value" sid="763641246396965" type="Player">
+                    <param id="0" name="Instance variable">SwapX</param>
+                    <param id="1" name="Value">Swappable.X</param>
+                </action>
+                <action id="-10" name="Set value" sid="157996323539106" type="Player">
+                    <param id="0" name="Instance variable">SwapY</param>
+                    <param id="1" name="Value">Swappable.Y</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="386162892321984">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="488850873541760" type="Swappable">
+                            <param id="0" name="Unique ID">Player.Swap</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="527755384366102" type="Swappable">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="888747711619460">
+            <conditions>
+                <condition behavior="Flash" id="1" name="On flash ended" sid="129713358982779" type="Swappable" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="132821615153958">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="707623291582048" type="Player">
+                            <param id="0" name="Instance variable">Swap</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Swappable.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="985521745878737" type="Swappable">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="845917528176863">
+            <conditions>
+                <condition behavior="Flash" id="0" name="Is flashing" sid="626414251453844" type="Swappable" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="667152710511148">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="260094366703326" type="Player">
+                            <param id="0" name="Instance variable">Swap</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">Swappable.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="1" name="Stop flashing" sid="550799461033924" type="Swappable" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="844719652796705">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="365633423679479" type="Keyboard">
+                    <param id="0" name="Key">66</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="137288674526396" type="Swappable">
+                    <param id="0" name="Unique ID">Player.Swap</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="855648104298211" type="Swappable">
+                    <param id="0" name="Object">Player</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="243034242686093" type="Player">
+                    <param id="0" name="X">Player.SwapX</param>
+                    <param id="1" name="Y">Player.SwapY</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

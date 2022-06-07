@@ -16,12 +16,14 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -94,6 +96,11 @@
         </object-type>
         <object-type name="Player" sid="256665817595237">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Swap" sid="556267739941563" type="number" />
+                <instance-variable name="SwapX" sid="680243971631479" type="number" />
+                <instance-variable name="SwapY" sid="150632749450406" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="802576712709011">
                     <behavior id="Platform" />
@@ -114,6 +121,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.5" y="1" />
                         <collision-poly>
                             <point x="0.160156" y="0.441406" />
                             <point x="0.335938" y="0.238281" />
@@ -234,6 +242,21 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Swappable" sid="148180665965929">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Flash" sid="991207033866185">
+                    <behavior id="Flash" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="920092908556938">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Text" sid="374505246164567">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />
