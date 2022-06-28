@@ -1,0 +1,8 @@
+<tutorial>
+    <hint id="tutorial_1">Presiona las teclas direccionales para caminar!</hint>
+    <hint id="tutorial_2">Presiona la tecla arriba para saltar!</hint>
+    <hint id="tutorial_3">Ve hacia la izquierda para volverlo a intentar!</hint>
+    <hint id="tutorial_4">Sube por acá atraves de las plataformas!</hint>
+    <hint id="tutorial_5">Bien hecho, baja por aqui y encontrarás tu recompensa</hint>
+    <hint id="tutorial_6">Has desbloqueado el doble salto, presiona arriba dos veces para llegar más lejos</hint>
+</tutorial>
